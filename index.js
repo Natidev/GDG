@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const mass=prompt("Enter the mass");
 const height=prompt("Enter height")
 let bmi=mass/(height*height);
@@ -17,3 +18,9 @@ console.log("bmi")
 //     element2.textContent=i;
 //     console.log(i);
 // })
+=======
+const mass=prompt("Enter the mass");
+const height=prompt("Enter height")
+let bmi=mass/(height*height);
+console.log(bmi)
+>>>>>>> 383520775c49e45b70d0d0903a9a8d0e483757d9
