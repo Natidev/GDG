@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            background-color:rgb(68, 2, 2);        }
+        .main{
+            background-color: rgb(85, 83, 83);
+            height: 750px;
+            width: 360px;
+            border-radius: 15px;
+        }
+        h1{
+            background-color: rgb(43, 38, 38);
+            border-radius: 60px;
+            margin: 5px;
+           height: 50px;
+            padding-left: 7%;
+            color: white;
+        }
+        .to-do{
+        font-size: 18px;
+         padding-left: 5%;
+        margin-right: 10px;
+        margin-left: 5px;
+        background-color:rgb(63, 63, 63);
+         color: white;
+         width: 330px;
+         height: 80px;
+        border-radius: 8px;
+        }
+        #add{
+            margin-left: 290px;
+            width: 50px;
+            height: 50px;
+            border-radius: 30px;
+            font-size:x-large;
+        }
+        input{
+            background-color:rgb(255, 255, 255);
+        padding: 12px;
+        margin: 5px;
+         color: rgb(44, 41, 41);
+         width: 300px;
+         height: 10px;
+        border-radius: 8px;
+        }
+       button{
+        margin-left: 90%;
+       }
+    </style>
+    
+</head>
+<body>
+    <div class="main">
+        <h1>To-do </h1>
+
+        <div  id="todo">
+            <div class="task to-do" id="0" onclick=del(0)>
+                <p >Some task Lorem ipsum  consectetur adipisicing elit. Laborum, illo cum </p><button>x</button>
+                
+            </div>
+            
+            </div>
+            <input type="text" placeholder="Add task" id="new_task">
+            <input id="add"type="submit" value="+">
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
