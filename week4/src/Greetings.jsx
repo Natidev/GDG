@@ -1,4 +1,6 @@
+import Counter from "./Counter";
 function Greetings(){
-    return <h3>Hello JSX component</h3>;
+    
+    return <Counter message="Hello JSX component"/>;
 }
 export default Greetings;

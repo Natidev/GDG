@@ -13,13 +13,10 @@ function Todo({task,func,funcCheck}){
                  <input className="checkBox" type="checkbox" onChange={(e)=>{
                     funcCheck(e.target.checked,str.num)
                  }}/>{str.val} 
-                 <button className="rmv"onClick={()=>func(str.num)}>x</button>
+                 <button className="rmv"onClick={()=>func(str.num)}>
+                 <img src="src\imgs\cross.png" width="15" height="15"/>
+                 </button>
            </li> 
-                
-             
-           
-            
-           
             </p>
             
         </div>

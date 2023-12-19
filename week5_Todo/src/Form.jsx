@@ -47,18 +47,35 @@ format(data);
 }
 export default Form;*/
 import { useState } from "react";
+import React, { useReducer } from 'react';
 import Todo from "./Todo";
 import Done from "./Done"
 function Form({}){ 
 let values=[]
 const [data,setData]=useState();
-const [checked,setChecked]=useState([]);
+const [, forceUpdate] = useReducer(x => x + 1, 0);
 const [elem,setElem]=useState([])
 const [done,setDone]=useState([])
 const [count,setCount]=useState(0)
+const [num1,setNum1]=useState(0)
 function sorts(){
+    let num=num1;
+    if(num%3===0){
     setElem(elem.sort((a,b)=>a.val.localeCompare(b.val)));
-    console.log(elem)
+      
+}
+    else if(num%3===1){
+    setElem(elem.sort((a,b)=>b.val.localeCompare(a.val)));
+
+    }
+    else{
+        setElem(elem.sort((b,a)=>b.num-a.num)); 
+
+    }
+    num++
+   setNum1(num)
+    forceUpdate();
+    console.log(num)
 }
  function handleSubmit(e){
 e.preventDefault();
@@ -93,7 +110,9 @@ handleDelete(i)
         <td>
 <div className='main'>  
     <h3>To do</h3>
-    <button className="sortBtn"onClick={sorts}>Sort icon</button>
+    <button className="sortBtn"onClick={sorts}>
+    <img src="src\imgs\sort.png" width="15" height="15"/>
+    </button>
     <Todo task={elem} func={handleDelete} funcCheck={handleTaskchecked}/>
    <form action="" onSubmit={(e)=>{
         e.preventDefault();
@@ -113,6 +132,9 @@ handleDelete(i)
 <div className='main done1' >
     <h3>Finished tasks</h3>
 <Done tasks={done} func={handleDelete} funcCheck={handleTaskchecked}/>
+<button className="cleanbtn"onClick={()=>setDone([])}>
+<img src="src\imgs\clean.png" width="25" height="25"/>
+</button>
     </div>
         </td>
       </tr>
