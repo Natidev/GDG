@@ -82,9 +82,9 @@ e.preventDefault();
 setElem([...elem,{val:data,num:count}])
 setData("")
 let a=count;
-
-setCount(a)
 a++;
+setCount(a)
+
 console.log(count)
  }  
   const handleDelete=(i)=>{
@@ -95,10 +95,12 @@ setElem([...a])
 console.log(a[i])
   }
   const handleTaskchecked=(j,i)=>{
-    j=true
+    
 if(j){
 setDone([elem[i].val,...done])
 handleDelete(i)
+console.log(i)
+console.log(elem)
 }else{
     console.log("fakse")
 }
