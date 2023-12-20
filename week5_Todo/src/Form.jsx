@@ -61,15 +61,11 @@ const [num1,setNum1]=useState(0)
 function sorts(){
     let num=num1;
     if(num%3===0){
-    setElem(elem.sort((a,b)=>a.val.localeCompare(b.val)));
+    setElem(elem.sort((a,b)=>a.localeCompare(b)));
       
 }
     else if(num%3===1){
-    setElem(elem.sort((a,b)=>b.val.localeCompare(a.val)));
-
-    }
-    else{
-        setElem(elem.sort((b,a)=>b.num-a.num)); 
+    setElem(elem.sort((a,b)=>b.localeCompare(a)));
 
     }
     num++
@@ -77,13 +73,16 @@ function sorts(){
     forceUpdate();
     console.log(num)
 }
+let a=count;
  function handleSubmit(e){
 e.preventDefault();
-setElem([...elem,{val:data,num:count}])
+
+setElem([...elem,data])
+a=a+1;
+setCount(a);
 setData("")
-let a=count;
-a++;
-setCount(a)
+
+
 
 console.log(count)
  }  
@@ -96,14 +95,12 @@ console.log(a[i])
   }
   const handleTaskchecked=(j,i)=>{
     
-if(j){
-setDone([elem[i].val,...done])
+
+setDone([elem[i],...done])
 handleDelete(i)
 console.log(i)
 console.log(elem)
-}else{
-    console.log("fakse")
-}
+
   }
 
    return(<>
@@ -133,7 +130,7 @@ console.log(elem)
         <td>
 <div className='main done1' >
     <h3>Finished tasks</h3>
-<Done tasks={done} func={handleDelete} funcCheck={handleTaskchecked}/>
+<Done tasks={done}/>
 <button className="cleanbtn"onClick={()=>setDone([])}>
 <img src="src\imgs\clean.png" width="25" height="25"/>
 </button>

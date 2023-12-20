@@ -1,19 +1,20 @@
 import "./Todo.css"
 function Todo({task,func,funcCheck}){
 
-    let b=task.map((str)=>{
+    let b=task.map((str,index)=>{
 
     return(
         
-        <div className="cont" key={str.num}>
+        <div className="cont" key={index}>
           
             <p className="Task">
             
                      <li type>
-                 <input className="checkBox" type="checkbox" onChange={(e)=>{
-                    funcCheck(e.target.checked,str.num)
-                 }}/>{str.val} 
-                 <button className="rmv"onClick={()=>func(str.num)}>
+                 <input className="checkBox" type="checkbox" onClick={(e)=>{
+                    funcCheck(e.target.checked,index)
+                    console.log(str)
+                 }}/>{str} 
+                 <button className="rmv"onClick={()=>func(index)}>
                  <img src="src\imgs\cross.png" width="15" height="15"/>
                  </button>
            </li> 

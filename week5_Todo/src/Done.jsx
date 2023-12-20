@@ -1,5 +1,5 @@
 import './Todo.css'
-function Done({tasks,func,funcCheck}){
+function Done({tasks}){
 let taskList=tasks.map((str,index)=>{    
 return (
            <div className='doneT'>
