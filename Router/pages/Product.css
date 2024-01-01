@@ -1,0 +1,10 @@
+img{
+    display: block;
+}
+.plist{
+    display: flex;
+    flex-wrap: wrap;
+}
+.singleProduct{
+    display: inline;
+}
