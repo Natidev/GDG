@@ -1,0 +1,28 @@
+body{
+    background-color: rgb(216, 216, 216);
+}
+header{
+    position: absolute;
+    display: flex;
+    margin: 1rem;
+    top:0;
+    right: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+nav{
+    padding: 0.4rem;
+}
+.NavLink{
+color: rgb(17, 55, 73);
+margin:0 10px;
+}
+.NavLink.active{
+    color: black;
+    font: bold;
+    text-decoration: underline;
+}
+.NavLink:hover{
+    color: rgb(33, 10, 48);
+}

@@ -1,0 +1,26 @@
+section.container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem;
+    justify-content: flex-start;
+}
+section.products{
+    /* min-width: 25%;
+    min-height: 35%;
+    max-width: 300px;
+    max-height:400px ; */
+    background-color: rgb(255, 255, 255);
+    min-width: 200px;
+    width: auto;
+    height: 300px;
+    border-radius: 20px;
+    padding: 1rem;
+    margin: 1rem;
+}
+.products img{
+    position: relative;
+    top: 0;
+    width: 90%;
+    height: 60%;
+}
+

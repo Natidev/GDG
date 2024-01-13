@@ -1,0 +1,49 @@
+.listofcartitems{
+background-color: rgb(161, 161, 161);
+padding: 1rem;
+border-radius: 20px;
+width: 100%;
+}
+.cartlist{
+    background-color: bisque;
+    border-radius: 2rem;
+    padding:1rem;
+    display: inline-flex;
+    position: relative;
+    margin: 0rem 1rem 1rem 1rem;
+    min-width: 70%;
+}
+.cartlist img{
+    width: 3rem;
+    height:3rem;
+}
+.cartlist span{
+    margin: 0.25rem 1rem;
+}
+.cartlist input{
+    width: 2.5rem;
+    height: 1.3rem;
+}
+.cartlist button{
+    position:sticky;
+    top:0;
+    left: 0;
+    max-width: 1.5rem;
+    background-color: transparent;
+    max-height: 1.5rem;
+    width: fit-content;
+    height: fit-content;
+    border: none;
+    border-radius: 20%;
+    padding: 3px;
+    margin: 0.5rem;
+}
+.cartlist button img{
+    width: 100%;
+    height: 100%;
+}
+.cartlist .input{
+    position: absolute;
+    right: 1rem;
+    text-align: center;
+}
