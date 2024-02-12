@@ -6,7 +6,6 @@ function Todo({task,func,funcCheck}){
     return(
         
         <div className="cont" key={index}>
-          
             <p className="Task">
             
                      <li type>

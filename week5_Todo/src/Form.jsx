@@ -62,46 +62,35 @@ function sorts(){
     let num=num1;
     if(num%3===0){
     setElem(elem.sort((a,b)=>a.localeCompare(b)));
-      
 }
     else if(num%3===1){
     setElem(elem.sort((a,b)=>b.localeCompare(a)));
-
     }
     num++
-   setNum1(num)
+    setNum1(num)
     forceUpdate();
     console.log(num)
 }
 let a=count;
- function handleSubmit(e){
+    function handleSubmit(e){
 e.preventDefault();
-
 setElem([...elem,data])
 a=a+1;
 setCount(a);
 setData("")
-
-
-
-console.log(count)
- }  
-  const handleDelete=(i)=>{
+}  
+    const handleDelete=(i)=>{
 let a=[];
 a=[...elem];
 a.splice(i,1)
 setElem([...a])
-console.log(a[i])
-  }
-  const handleTaskchecked=(j,i)=>{
-    
-
+}
+    const handleTaskchecked=(j,i)=>{
 setDone([elem[i],...done])
 handleDelete(i)
 console.log(i)
 console.log(elem)
-
-  }
+    }
 
    return(<>
     <table>
@@ -131,8 +120,8 @@ console.log(elem)
 <div className='main done1' >
     <h3>Finished tasks</h3>
 <Done tasks={done}/>
-<button className="cleanbtn"onClick={()=>setDone([])}>
-<img src="src\imgs\clean.png" width="25" height="25"/>
+<button className="cleanbtn" onClick={()=>setDone([])}>
+    <img src="src\imgs\clean.png" width="25" height="25"/>
 </button>
     </div>
         </td>

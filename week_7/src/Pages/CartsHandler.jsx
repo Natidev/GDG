@@ -1,17 +1,13 @@
 import { productList } from "../assets/data"
-import { useState } from "react"
+import { useState,useEffect } from "react"
 import Cart from "./Cart";
-function CartsHandler(){
+import Products from "./Products";
+function CartsHandler({showproduct}){
 const [items,setItems]= useState([]);
-const handleAdd=(index)=>{
-    setItems([...items,productList.at(index)])
-    console.log(items)
-    console.log(productList.at(index))
-}
-const handleRemove=(id1)=>{
-    let a=[...items]
-    setItems(a.filter((obj)=>obj.id!=id1))
-}
-return <Cart products={items} remove={handleRemove} addItem={handleAdd}/>
-}
+
+if(showproduct){
+    return <Products func1={handleAdd}/>
+}else{
+return <Cart products={productList} remove={func} />
+}}
 export default CartsHandler;
