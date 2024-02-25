@@ -3,6 +3,7 @@ import { productList } from "../assets/data";
 import './product.css'
 function Products({func1}){
     let {id}=useParams();
+    console.log(productList.at(id))
     let item=productList.at(id);
     return <>
     <section className="products">  
@@ -10,7 +11,6 @@ function Products({func1}){
         <p>{item.info}</p>
         <p>Price: {item.price}$</p>
         <button onClick={()=>{
-            func1()
         }}>
             Add
         </button>

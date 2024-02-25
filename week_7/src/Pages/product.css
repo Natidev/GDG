@@ -15,12 +15,15 @@ section.products{
     height: 300px;
     border-radius: 20px;
     padding: 1rem;
-    margin: 1rem;
+    margin: 10px;
 }
 .products img{
     position: relative;
     top: 0;
     width: 90%;
     height: 60%;
+}
+h2{
+    margin-top: 2rem;
 }
 

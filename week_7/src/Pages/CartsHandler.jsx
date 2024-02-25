@@ -6,7 +6,7 @@ function CartsHandler({showproduct}){
 const [items,setItems]= useState([]);
 
 if(showproduct){
-    return <Products func1={handleAdd}/>
+    return <Products />
 }else{
 return <Cart products={productList} remove={func} />
 }}
